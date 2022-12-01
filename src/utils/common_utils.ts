@@ -1,15 +1,14 @@
-import { Console } from 'console';
 import * as fs from 'fs';
 
 let CommonUtils = {
   readFile: (path: string): string[] => {
     let lines: string[] = [];
     const allFileContents = fs.readFileSync(path, 'utf-8');
-    
+
     allFileContents.split(/\r?\n/).forEach(line =>  {
       lines.push(line.trim());
     });
-    
+
     return lines;
   },
 
